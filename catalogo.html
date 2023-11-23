@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <title>Tienda de celulares</title>
+        <link rel="stylesheet" href="style.css">
+        <style>
+            body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-color: pink;
+            color: #333;
+            }
+            header {
+            background-color: #000000;
+            color: pink;
+            padding: 10px;
+            text-align: center;
+            }
+            h1 {
+            margin-top: 20px;
+            }
+            .products-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            }
+            .cellphone, .airpod {
+            margin: 10px;
+            text-align: left;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s ease-in-out;
+            width: 300px;
+            }
+            .cellphone:hover, .airpod:hover {
+transform: scale(1.05);
+}
+.cellphone img, .airpod img {
+width: 100%;
+height: auto;
+margin-bottom: 10px;
+border-bottom: 1px solid #ddd;
+}
+.cellphone p, .airpod p {
+font-size: 14px;
+padding: 10px;
+}
+.buy-button {
+background-color: #4CAF50;
+color: white;
+border: none;
+padding: 10px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 14px;
+cursor: pointer;
+}
+.specs-container {
+display: none;
+margin-top: 10px;
+padding: 10px;
+background-color: #fff;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+border-radius: 8px;
+}
+ul {
+list-style-type: none;
+padding: 0;
+margin: 0;
+}
+ul li {
+    padding: 5px;
+}
+</style>
+
+    </head>
+    <body>
+        <header id="main-header">
+            <a id="logo-header" href="#">
+                <span class="site-name">PIA</span>
+                <span class="site-desc">Diseño Avanzado de Paginas Web</span>
+            </a><!--/#logo-header-->
+            <nav>
+                <ul>
+                    <li><a href="Inicio.html">Inicio</a></li><!--Menu Inicio-->
+                    <li><a href="somos.html">¿Quienes somos?</a></li>
+                    <li><a href="historia.html">Historia</a></li>
+                    <li><a href="catalogo.html">catalogo</a></li>
+                    <li><a href="promociones.html">Promociones</a></li>
+                    <li><a href="sucursales.html">Sucursales</a></li>
+                    <li><a href="contactanos.html">Contactanos</a></li>
+                </ul>
+            </nav>
+        </header>
+    <body>
+    <header>
+        <br><br>
+        <br><br>
+        <br><br>
+    <p>Catalogo</p>
+    </header>
+    <div class="products-container">
+    <div class="cellphone">
+    <img src="huawei.jpg" alt="Celular 1">
+    <p>Huawei P60 Pro - Plateado 24,000</p>
+    <button class="buy-button" onclick="showSpecifications(1)">Ver
+    Especificaciones</button>
+    <div id="specs-container-1" class="specs-container">
+    <ul id="specs-list-1"></ul>
+    </div>
+    </div>
+    <div class="cellphone">
+    <img src="xiaomi.jpg" alt="Celular 2">
+    <p>Xiaomi 13T(256 GB) - Aqua $23,000</p>
+    <button class="buy-button" onclick="showSpecifications(2)">Ver
+    Especificaciones</button>
+    <div id="specs-container-2" class="specs-container">
+    <ul id="specs-list-2"></ul>
+    </div>
+    </div>
+    <div class="cellphone">
+    <img src="motorola.jpg" alt="Celular 3">
+    <p>Moto Edge 50 5G(256GB)-Celeste $9,000</p>
+    <button class="buy-button" onclick="showSpecifications(3)">Ver
+    Especificaciones</button>
+    <div id="specs-container-3" class="specs-container">
+    <ul id="specs-list-3"></ul>
+    </div>
+    </div>
+    <div class="cellphone">
+    <img src="samsung.jpg" alt="Celular 4">
+    <p>Samsung s22 ultra(256GB)-Grafito $22,000 </p>
+    <button class="buy-button" onclick="showSpecifications(4)">Ver
+        Especificaciones</button>
+        <div id="specs-container-4" class="specs-container">
+        <ul id="specs-list-4"></ul>
+        </div>
+        </div>
+        <div class="cellphone">
+        <img src="iphone.jpg" alt="celular 5">
+        <p>Iphone 15 pro max(256)-$33,000</p>
+        <button class="buy-button" onclick="showSpecifications(5)">Ver
+        Especificaciones</button>
+        <div id="specs-container-5" class="specs-container">
+        <ul id="specs-list-5"></ul>
+        </div>
+        </div>
+        </div>
+        <script>
+        function showSpecifications(cellularNumber) {
+        var specsContainer = document.getElementById("specs-container-" +
+        cellularNumber);
+        var specsList = document.getElementById("specs-list-" +
+cellularNumber);
+specsList.innerHTML = "";
+switch (cellularNumber) {
+case 1:
+var specifications = [
+"Huawei Super Charge de 88w",
+"Pantalla Quad-Curve",
+"Color Plateado",
+"Almacenamiento: 256 GB"
+];
+break;
+case 2:
+var specifications = [
+"Bateria de 5000 mAh",
+"Tamaño de la pantalla 6,7 AMOLED",
+"Color Aqua",
+"Almacenamiento: 256 GB y 12 GB de RAM"
+];
+break;
+case 3:
+var specifications = [
+"Resistencia al Agua",
+"Bateria de 4,400 mAh",
+"Color Celeste",
+"Almacenamiento: 256 GB y 10 GB de RAM"
+];
+break;
+case 4:
+var specifications = [
+"Pluma tactil para telefono",
+"Bateria de 4500 mAh",
+"Color Marron",
+"Almacenamiento: 256 GB"
+];
+break;
+case 5:
+var specifications = [
+"Sistema Operativo IOS",
+"Bateria 5000 mAh",
+"Nueva funcion con gestos",
+"Almacenamiento: 256 GB"
+];
+break;
+default:
+var specifications = ["Especificaciones no disponibles"];
+break;
+}
+for (var i = 0; i < specifications.length; i++) {
+var listItem = document.createElement("li");
+listItem.textContent = specifications[i];
+specsList.appendChild(listItem);
+}
+specsContainer.style.display = "block";
+}
+</script>
+</body>
+<p>Edgar Aldair Grimaldo Avila 2163608 #19</p>
+</html>
